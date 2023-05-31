@@ -70,42 +70,42 @@
         input[type=submit]:hover {
             background-color: #45a049;
         }
-        <!--input[type=reset]:hover {
-        background-color: #45a049;-->
+        input[type=reset]:hover {
+           background-color: #45a049;
         }
 
-    </style>
-</head>
-<body>
-    <h2 style="color: red; text-align:center;">Submits the required details in following blank space!!</h2>
-    <form method="post" action="process.php">;
+     </style>
+     </head>
+     <body>
+     <h2 style="color: red; text-align:center;">Submits the required details in following blank space!!</h2>
+     <form method="post" action="process.php">
         <label for="name">Name</label>
         <div>
-            <input type="text" name="myName" id="name" placeholder="yourname...">
+            <input type="text" name="Name" id="name" placeholder="yourname...">
         </div>
         <br>
 
         <label for="university">University</label>
         <div>
-            <input type="text" name="myUniversity" id="university" placeholder="your-university...">
+            <input type="text" name="University" id="university" placeholder="your-university...">
         </div>
         <br>
 
-        <label for="login-register">Registration_Number</label>
+        <label for="register">Registration_Number</label>
         <div>
-            <input type="number"  name="myroll" id="register" placeholder="your-Registration-num...">
+            <input type="number"  name="Registration_Number" id="register" placeholder="your-Registration-num...">
         </div>
         <br>
 
 
         <label for="age">Age</label>
         <div>
-            <input type="number"  name="myroll" id="age" placeholder="yourage...">
+            <input type="number"  name="Age" id="age" placeholder="yourage...">
         </div>
         <br>
-        <label for="email">E-mail</label>
+        <label for="email">E_mail</label>
         <div>
-            <input type="email" name="myEmail" id="email" placeholder="yourEmail...">
+            <input type="email" name="E_mail" id="email" placeholder="yourEmail...">
         </div>
         <br>
         <label for="eligible">Are You Eligible?</label>
@@ -115,19 +115,19 @@
         <br>
         <label for="gender">Gender</label>
         <div>
-            Male<input type="radio" name="mygender" id="gender"> Female<input type="radio" name="mygender" id="gender"> Other<input type="radio" name="mygender" id="gender">
+            Male<input type="radio" name="Gender" id="gender"> Female<input type="radio" name="mygender" id="gender"> Other<input type="radio" name="mygender" id="gender">
 
         </div> 
         <br>
         <label for="status">Maritial-Status</label>
         <div>
-            UnMarried<input type="radio" name="mystatus" id="status"> Married<input type="radio" name="mystatus" id="status"> Divorce<input type="radio" name="mystatus" id="status">
+            UnMarried<input type="radio" name="Maritial_Status" id="status"> Married<input type="radio" name="mystatus" id="status"> Divorce<input type="radio" name="mystatus" id="status">
         </div> 
         <br>
 
         <div>
             Write About Yourself:<br>
-            <textarea name="mytext" cols="200" rows="10"></textarea>
+            <textarea name="Write_About_Yourself" cols="200" rows="10"></textarea>
         </div>
         <br>
         <label for="car">Car:</label>
@@ -149,17 +149,17 @@
         </form>
        <?php
      // define variables and set to empty values
-      $Name = $University = $Registration_Number = $Age = $E-mail  =$Gendeer=Maritial-Status=Write About Yourself ="";
+        $Name = $University = $Registration_Number = $Age = $E_mail  = $Gender =$Maritial_Status =$Write_About_Yourself = "";
 
-     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $Name = test_input($_POST["Name"]);
      $University = test_input($_POST["University"]);
      $Registration_Number = test_input($_POST["Registration_Number"]);
-       $Age = test_input($_POST["Age"]);
-     $E-mail = test_input($_POST["E-mail"]);
+     $Age = test_input($_POST["Age"]);
+     $E_mail = test_input($_POST["E_mail"]);
      $Gender= test_input($_POST["Gender"]);
-     $Maritial-Status = test_input($_POST["Maritial-Status"]);
-       $Write About Yourself = test_input($_POST["Write About Yourself"]);
+     $Maritial_Status = test_input($_POST["Maritial_Status"]);
+       $Write_About_Yourself = test_input($_POST["Write_About_Yourself"]);
      }
 
      function test_input($data) {
@@ -180,15 +180,16 @@
      echo "<br>";
      echo $Age;
      echo "<br>";
-     echo $E-mail;
+     echo $E_mail;
      echo "<br>";
      echo $Gender;
      echo "<br>";
-     echo $Maritial-Status;
+     echo $Maritial_Status;
      echo "<br>";
-     echo $Write About Yourself; 
+     echo $Write_About_Yourself; 
       echo "<br>";
       ?>
+
         </body>
         </html>
         
